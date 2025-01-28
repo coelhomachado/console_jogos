@@ -21,39 +21,50 @@ def jokenpo():
   import random
   opcoes = ["Pedra", "Papel", "Tesoura"]
   cpu = random.choice(opcoes)
-  print(cpu)
+  #print(cpu)
   jogador = input("Digite sua jogada:")
   if cpu == jogador:
     print("Empate!")
   elif cpu == 'Pedra'and jogador == 'Papel':
     print("Você ganhou!")
   elif cpu == 'Pedra'and jogador == 'Tesoura':
-    print("Você perdeu!")
+    print("Você perdeu,", cpu, "venceu!")
   elif cpu == 'Papel'and jogador == 'Tesoura':
     print("Você ganhou!")
   elif cpu == 'Papel'and jogador == 'Pedra':
-    print("Você perdeu!")
+    print("Você perdeu,", cpu, "venceu!")
   elif cpu == 'Tesoura'and jogador == 'Pedra':
     print("Você ganhou!")
   elif cpu == 'Tesoura'and jogador == 'Papel':
-    print("Você perdeu!")
+    print("Você perdeu,", cpu, "venceu!")
   else:
     print("Opção inválida tente novamente!")
 
-#def quiz():
+def quiz():
+  resposta = input("Qual é o principal vilão dos filmes Star Wars?")
+  if resposta == 'Dart Vader':
+    print("Parabéns, você acertou!")
+  else:
+    print("Que pena, você errou!")
 
-opcao = input('''### CONSOLE DE JOGOS ###
-# MENU PRINCIPAL #
-Selecione uma opção:
-1 - Adivinhação
-2 - Jokenpo
-3 - Quiz
-''')
-if opcao == '1':
-  adivinhacao()
-elif opcao == '2':
-  jokenpo()
-elif opcao == '3':
-  quiz()
-else:
-  print("Opção inválida, tente novamente!")
+executar = True
+while executar == True:
+  opcao = input('''### CONSOLE DE JOGOS ###
+  # MENU PRINCIPAL #
+  Selecione uma opção:
+  1 - Adivinhação
+  2 - Jokenpo
+  3 - Quiz
+  0 - SAIR
+  ''')
+  if opcao == '1':
+    adivinhacao()
+  elif opcao == '2':
+    jokenpo()
+  elif opcao == '3':
+    quiz()
+  elif opcao == '0':
+    executar = False
+    print("Obrigado, volte sempre!")
+  else:
+    print("Opção inválida, tente novamente!")
