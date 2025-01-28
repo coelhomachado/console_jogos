@@ -42,13 +42,13 @@ def jokenpo():
 
 #def quiz():
 
-opcao = input(print('''### CONSOLE DE JOGOS ###
+opcao = input('''### CONSOLE DE JOGOS ###
 # MENU PRINCIPAL #
 Selecione uma opção:
 1 - Adivinhação
 2 - Jokenpo
 3 - Quiz
-'''))
+''')
 if opcao == '1':
   adivinhacao()
 elif opcao == '2':
